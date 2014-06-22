@@ -118,5 +118,5 @@ meltData<-melt(finDataRelExt,id=c("subject","activity_label"))
 tidyData<-dcast(meltData,subject+activity_label~variable,mean)
 
 #export the data 
-write.table(tidyData,file="tidyData.txt",row.names = FALSE)
+write.table(tidyData,file="tidyData.txt",row.names = FALSE,sep="|")
 
